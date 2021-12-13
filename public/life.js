@@ -10,9 +10,6 @@ const closeModal = document.querySelector('.close-modal');
 const alert = document.querySelector('#alert');
 const alertP = document.querySelector('#alert-p');
 
-if (window.history.replaceState) {
-  window.history.replaceState(null, null, window.location.href);
-}
 
 if (alertP.textContent !== '') {
   alert.style.opacity = 1;

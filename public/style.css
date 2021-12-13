@@ -98,21 +98,21 @@ body {
 }
 
 .slide1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('images/slide1.jpg');
 }
 
 .slide2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('images/slide2.jpg');
 }
 .slide3 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('images/slide3.jpg');
 }
 
 .slide4 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('images/slide4.jpg');
 }
 
@@ -432,6 +432,9 @@ button.btn:hover {
 
   .btns {
     padding-top: 30px;
+  }
+  .btn {
+    margin-right: 0;
   }
   .arrow {
     width: 30px;
