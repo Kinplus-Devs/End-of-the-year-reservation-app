@@ -60,29 +60,20 @@ app.get('/', (req, res) => {
 
 app.post('/thank-you', async (req, res) => {
   const noGuest = await User.countDocuments({ attendee: 'physical' });
-
-  if (req.body.attendee === 'virtual' || noGuest > 24) {
-    const emailExists = await User.findOne({ email: req.body.email });
-    if (emailExists) {
-      return res.status(StatusCodes.FORBIDDEN).render('index', {
-        msg: 'Email is already registered'
-      });
-    }
-    req.body.type = req.body.type === 'in-house' ? 'inHouse' : 'guest';
-    const user = await User.create(req.body);
-    return res.status(StatusCodes.OK).render('virtual');
-  }
-
-  req.body.type = req.body.type === 'in-house' ? 'inHouse' : 'guest';
   const emailExists = await User.findOne({ email: req.body.email });
   if (emailExists) {
     return res.status(StatusCodes.FORBIDDEN).render('index', {
       msg: 'Email is already registered'
     });
   }
+  req.body.type = req.body.type === 'in-house' ? 'inHouse' : 'guest';
+
+  if (req.body.attendee === 'virtual' || noGuest > 24) {
+    const user = await User.create(req.body);
+    return res.status(StatusCodes.OK).render('virtual');
+  }
 
   const user = await User.create(req.body);
-  // console.log(user);
   res.status(StatusCodes.OK).render('thank-you', {
     name: ''
   });

@@ -13,8 +13,9 @@ body {
 
 .go-back {
   position: absolute;
+  color: tomato;
   top: 40px;
-  left: 100px;
+  left: 10px;
 }
 
 .box {
@@ -78,6 +79,9 @@ p {
 }
 
 @media only screen and (max-width: 767px) {
+  .go-back {
+    font-size: 30px;
+  }
   .box {
     width: 100%;
     height: 100vh;
