@@ -10,6 +10,10 @@ const closeModal = document.querySelector('.close-modal');
 const alert = document.querySelector('#alert');
 const alertP = document.querySelector('#alert-p');
 
+if (window.history.replaceState) {
+  window.history.replaceState(null, null, window.location.href);
+}
+
 if (alertP.textContent !== '') {
   alert.style.opacity = 1;
   setTimeout(function () {
@@ -21,11 +25,13 @@ if (alertP.textContent !== '') {
 let close = () => {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
+  document.querySelector('.form').reset();
 };
 
 registerBtn.addEventListener('click', function () {
   modal.classList.remove('hidden');
   overlay.classList.remove('hidden');
+  document.querySelector('.form').reset();
 });
 
 closeModal.addEventListener('click', close);

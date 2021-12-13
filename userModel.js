@@ -20,6 +20,10 @@ const UserSchema = new mongoose.Schema(
       type: String,
       required: true
     },
+    attendee: {
+      type: String,
+      required: true
+    },
     phone: String,
     type: {
       type: String,
