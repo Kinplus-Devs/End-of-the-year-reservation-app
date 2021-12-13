@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- <link rel="stylesheet" href="all.css"> -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="normalize.css">
+   <link rel="stylesheet" href="style.css">
+   <title>KinPlus-</title>
+</head>
+
+<body>
+   <div class="alert" id="alert">
+      <p id="alert-p"><%= msg %></p>
+   </div>
+   <div class="main">
+      <nav class="nav">
+         <div class="container">
+            <div class="logo">
+               <img src="./images/logo.png" alt="kinplus logo">
+            </div>
+            <div class="social">
+               <a href="#"><i class="fab fa-facebook-square"></i></a>
+               <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+         </div>
+      </nav>
+      <header>
+         <div class="wrap">
+            <div id="arrow-left" class="arrow">
+               <i class="fas fa-less-than"></i>
+            </div>
+            <div id="slider">
+               <div class="slide slide1">
+                  <div class="slide-content">
+                     <div class="hero">
+                        <div>
+                           <h1>End of the Year
+                              <span>MEET & GREET</span>
+                           </h1>
+                           <hr>
+                           <p>An event to celebrate our little wins in the year 2021</p>
+                        </div>
+
+                        <div class="btns">
+                           <a href="#" class="btn register">REGISTER</a>
+                           <a href="https://www.kinplusgroup.com/" class="btn tour" target="_blank" class="btn">TAKE A
+                              TOUR</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="slide slide2">
+                  <div class="slide-content">
+                     <div class="hero">
+                        <div>
+                           <h1>End of the Year
+                              <span>MEET & GREET</span>
+                           </h1>
+                           <hr>
+                           <p>An event to celebrate our little wins in the year 2021</p>
+                        </div>
+
+                        <div class="btns">
+                           <a href="#" class="btn register">REGISTER</a>
+                           <a href="https://www.kinplusgroup.com/" class="btn tour" target="_blank" class="btn">TAKE A
+                              TOUR</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="slide slide3">
+                  <div class="slide-content">
+                     <div class="hero">
+
+                        <h1>End of the Year
+                           <span>MEET & GREET</span>
+                        </h1>
+                        <hr>
+                        <p>An event to celebrate our little wins in the year 2021</p>
+
+                        <div class="btns">
+                           <a href="#" class="btn register">REGISTER</a>
+                           <a href="https://www.kinplusgroup.com/" class="btn tour" target="_blank" class="btn">TAKE A
+                              TOUR</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="slide slide4">
+                  <div class="slide-content">
+                     <div class="hero">
+
+                        <h1>End of the Year
+                           <span>MEET & GREET</span>
+                        </h1>
+                        <hr>
+                        <p>An event to celebrate our little wins in the year 2021</p>
+
+                        <div class="btns">
+                           <a href="#" class="btn register">REGISTER</a>
+                           <a href="https://www.kinplusgroup.com/" class="btn tour" target="_blank" class="btn">TAKE
+                              A
+                              TOUR</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div id="arrow-right" class="arrow">
+               <i class="fas fa-greater-than"></i>
+            </div>
+         </div>
+      </header>
+      <footer class="footer">
+         <p>Copyright &copy; 2021 | KinPlus Technologies &trade; | All Right Reserved.</p>
+      </footer>
+   </div>
+
+
+   <div class="overlay hidden"></div>
+   <div class="modal hidden">
+      <span class="close-modal">X</span>
+      <div>
+         <h1>REGISTRATION FORM</h1>
+         <form class="form" action="/thank-you" method="post" enctype="application/x-www-form-urlencoded">
+            <div class="input-group">
+               <input type="text" name="firstname" id="name" placeholder="Firstname:" />
+            </div>
+            <div class="input-group">
+               <input type="text" name="lastname" placeholder="Lastname:" />
+            </div>
+            <div class="input-group">
+               <input type="email" name="email" placeholder="Email:" />
+            </div>
+            <div class="input-group">
+               <input type="tel" name="phone" placeholder="Phone No:" />
+            </div>
+            <div class="input-group">
+               <select name="religious" id="">
+                  <option value="Christianity" selected>Christianity</option>
+                  <option value="Islam">Islam</option>
+                  <option value="Other">Other</option>
+               </select>
+            </div>
+            <div class="input-gender">
+               Male: <input type="radio" name="gender" value="male" />
+               Female: <input type="radio" name="gender" value="female" />
+            </div>
+            <div class="input-gender">
+               In-House member: <input type="checkbox" name="type" value="in-house" />
+            </div>
+            <div class="input-group">
+               <button class="form-button" type="submit">Submit</button>
+            </div>
+         </form>
+      </div>
+   </div>
+   <!-- <script src="all.js"></script> -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"
+      integrity="sha512-fzff82+8pzHnwA1mQ0dzz9/E0B+ZRizq08yZfya66INZBz86qKTCt9MLU0NCNIgaMJCgeyhujhasnFUsYMsi0Q=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="life.js"></script>
+</body>
+
+</html>
