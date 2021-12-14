@@ -85,16 +85,19 @@ body {
   overflow: hidden;
   /* color: #0d285b; */
   height: calc(100vh - 130px);
+  transition: all 0.3s ease;
 }
 
 .wrap {
   position: relative;
+  transition: all 0.3s ease;
 }
 
 .slide {
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
+  transition: all 0.3s ease;
 }
 
 .slide1 {
@@ -121,6 +124,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition: all 0.3s ease;
 }
 
 .arrow {
@@ -300,7 +304,7 @@ button.btn:hover {
 }
 
 .input-group {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .input-group input,
@@ -320,7 +324,7 @@ button.btn:hover {
 }
 
 .input-gender {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
   gap: 10px;
