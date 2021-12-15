@@ -68,7 +68,7 @@ app.post('/thank-you', async (req, res) => {
   }
   req.body.type = req.body.type === 'in-house' ? 'inHouse' : 'guest';
 
-  if (req.body.attendee === 'virtual' || noGuest > 24) {
+  if (req.body.attendee === 'virtual' || noGuest > 34) {
     const user = await User.create(req.body);
     return res.status(StatusCodes.OK).render('virtual');
   }
