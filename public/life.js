@@ -1,5 +1,5 @@
 const button = document.getElementById('mainButton');
-const registerBtn = document.querySelector('.register');
+const registerBtns = document.querySelectorAll('.register');
 const form = document.querySelector('#mainButton');
 const closeBtn = document.querySelector('.close-button');
 const body = document.querySelector('body');
@@ -9,7 +9,6 @@ const modal = document.querySelector('.modal');
 const closeModal = document.querySelector('.close-modal');
 const alert = document.querySelector('#alert');
 const alertP = document.querySelector('#alert-p');
-
 
 if (alertP.textContent !== '') {
   alert.style.opacity = 1;
@@ -25,10 +24,12 @@ let close = () => {
   document.querySelector('.form').reset();
 };
 
-registerBtn.addEventListener('click', function () {
-  modal.classList.remove('hidden');
-  overlay.classList.remove('hidden');
-  document.querySelector('.form').reset();
+registerBtns.forEach(registerBtn => {
+  registerBtn.addEventListener('click', function () {
+    modal.classList.remove('hidden');
+    overlay.classList.remove('hidden');
+    document.querySelector('.form').reset();
+  });
 });
 
 closeModal.addEventListener('click', close);
